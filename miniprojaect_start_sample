@@ -1,0 +1,30 @@
+package testDBConn;
+
+//import javazoom.jl.player.MP3Player;
+
+public class MiniGame {
+
+	public static void main(String[] args) {
+//		MP3Player mp3 = new MP3Player();// 음악재생객체
+//		mp3.play("C://Users/otata/Desktop/typewriter-4초.mp3");
+		slowPrint("2021년 0월 0일, 마지막 프로젝트 발표 전날로 발표장 준비 및 \n"
+				+ "마무리 준비가 많았다. 선생님들과 빅데이터반 팀장은 학원에서 새벽 \n"
+				+ "늦게 마무리하고 각자 강의실이나 휴게실에 자리를 잡고 눈만 붙였다. \n"
+				+ "다음날 아침 빅데이터반 반장 박상민 학생은 담배를 피러 옥상에 가고, \n"
+				+ "그곳에서 시체 하나를 발견하는데... ", 35);
+//		mp3.play("C://Users/otata/Desktop/공포제목소리.mp3");
+	}
+
+	public static void slowPrint(String message, long millisPerChar) {
+		for (int i = 0; i < message.length(); i++) {
+			System.out.print(message.charAt(i));
+
+			try {
+				Thread.sleep(millisPerChar);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+		}
+	}
+
+}
