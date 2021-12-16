@@ -1,0 +1,59 @@
+public static boolean question() {
+        Scanner sc = new Scanner(System.in);
+        String answer = "";
+        int fail = 0;
+        int win = 0;
+ 
+        while (fail < 3 || win > 0) {
+            System.out.println("공포의! '+' 찍기!! 코드치기!!! '}'까지 총 6줄 작성하기!!");
+            System.out.println("+++++");
+            System.out.println("++++");
+            System.out.println("+++");
+            System.out.println("++");
+            System.out.println("+");
+            System.out.println();
+            System.out.println("단, 1: 이중 for문을 사용하고 // 2: 숫자는 0 부터 5 까지, 0 부터 4까지,");
+            System.out.println("//3: '+' 기호를 써서 // 4: 한 줄 씩 출력문을 작성하고 'enter!' \n start!!");
+ 
+            System.out.println("\n public static void main(String[] args) {");
+            for (int i = 1; i <= 6; i++) {
+                answer = sc.nextLine();
+                String mAnswer = answer.replaceAll(" ", ""); // 띄어쓰기가 다른 것은 없애서 잡아줌
+ 
+                if (i == 1 && mAnswer.equals("for(inti=0;i<5;i++){")) {
+                    System.out.println(i + "번째 줄 성공! 다음 줄 ");
+                } else if (i == 2 && mAnswer.equals("for(intj=0;j<4;j++){")) {
+                    System.out.println(i + "번째 줄 성공! 다음 줄 ");
+ 
+                } else if (i == 3 && mAnswer.equals("System.out.print(\"+\");")) {
+                    System.out.println(i + "번째 줄 성공! 다음 줄 ");
+ 
+                } else if (i == 4 && mAnswer.equals("}")) {
+                    System.out.println(i + "번째 줄 성공! 다음 줄 ");
+ 
+                } else if (i == 5 && mAnswer.equals("System.out.println();")) {
+                    System.out.println(i + "번째 줄 성공! 다음 줄 ");
+ 
+                } else if (i == 6 && mAnswer.equals("}")) {
+                    System.out.println("    }\n}\n" + i + "번째 줄 성공! 별찍기 성공!! ");
+                    win++;
+                } else {
+                    fail++;
+                    System.out.println("실패!" + fail + "회!");
+                    System.out.printf("\n\n\n");
+                    System.out.println("다시 푸십시오!");
+                    break;
+                }
+            }
+ 
+        }
+        sc.close();
+        if(win == 1) {
+            System.out.println("증거를 획득하였습니다!");
+            return true;
+        } else {
+            System.out.println("기회를 소진하셨습니다. 종료!!");
+            return false;
+        }
+ 
+    }
