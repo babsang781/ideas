@@ -17,15 +17,15 @@ public class IOControll {
 
 	public void makeFile() throws IOException {
 
-		// ¹öÆÛ¸¦ ¸¸µé¾î¼­ ÀÚ¹Ù ÄÚµå ÀÚ¹ÙÆÄÀÏÀ» ¸¸µé¾îÁÖ´Â °´Ã¼
-		// BufferedOutputStream ÀÔ·Â°´Ã¼.write(String.getBytes()) ÇØ¼­ ÀÔ·Â
+		// ë²„í¼ë¥¼ ë§Œë“¤ì–´ì„œ ìë°” ì½”ë“œ ìë°”íŒŒì¼ì„ ë§Œë“¤ì–´ì£¼ëŠ” ê°ì²´
+		// BufferedOutputStream ì…ë ¥ê°ì²´.write(String.getBytes()) í•´ì„œ ì…ë ¥
 		BufferedOutputStream bs = null;
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		String str2 = " ";
 		try {
 			bs = new BufferedOutputStream(new FileOutputStream("C:/Users/smhrd/Output.java"));
 			String str = "class Output{public static void main(String[] args){";
-			System.out.println("Á¤´ä ÄÚµå¸¦ ÀÔ·ÂÇÏ¼¼¿ä");
+			System.out.println("ì •ë‹µ ì½”ë“œë¥¼ ì…ë ¥í•˜ì„¸ìš”");
 			while (str2 != "") {
 				System.out.print(">>");
 				str2 = br.readLine();
@@ -45,25 +45,38 @@ public class IOControll {
 		File file = new File("C:/Users/smhrd/Output.java");
 		if (file.exists()) {
 			if (file.delete()) {
-				System.out.println("ÆÄÀÏ»èÁ¦ ¼º°ø");
+				System.out.println("íŒŒì¼ì‚­ì œ ì„±ê³µ");
 			} else {
-				System.out.println("ÆÄÀÏ»èÁ¦ ½ÇÆĞ");
+				System.out.println("íŒŒì¼ì‚­ì œ ì‹¤íŒ¨");
 			}
 		} else {
-			System.out.println("ÆÄÀÏÀÌ Á¸ÀçÇÏÁö ¾Ê½À´Ï´Ù.");
+			System.out.println("íŒŒì¼ì´ ì¡´ì¬í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤.");
+		}
+//		ì¶œì²˜: https://javacpro.tistory.com/27 [ë²„ë¬¼ë¦¬ì˜ ITê³µë¶€]
+		file = new File("C:/Users/smhrd/Output.class");
+
+		if (file.exists()) {
+			if (file.delete()) {
+				System.out.println("íŒŒì¼ì‚­ì œ ì„±ê³µ");
+			} else {
+				System.out.println("íŒŒì¼ì‚­ì œ ì‹¤íŒ¨");
+			}
+		} else {
+			System.out.println("íŒŒì¼ì´ ì¡´ì¬í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤.");
+		}
+		
+		file = new File("C:/Users/smhrd/write.txt");
+		
+		if (file.exists()) {
+			if (file.delete()) {
+				System.out.println("íŒŒì¼ì‚­ì œ ì„±ê³µ");
+			} else {
+				System.out.println("íŒŒì¼ì‚­ì œ ì‹¤íŒ¨");
+			}
+		} else {
+			System.out.println("íŒŒì¼ì´ ì¡´ì¬í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤.");
 		}
 
-		File file2 = new File("C:/Users/smhrd/Output.class");
-		if (file2.exists()) {
-			if (file2.delete()) {
-				System.out.println("ÆÄÀÏ»èÁ¦ ¼º°ø");
-			} else {
-				System.out.println("ÆÄÀÏ»èÁ¦ ½ÇÆĞ");
-			}
-		} else {
-			System.out.println("ÆÄÀÏÀÌ Á¸ÀçÇÏÁö ¾Ê½À´Ï´Ù.");
-		}
-//		ÃâÃ³: https://javacpro.tistory.com/27 [¹ö¹°¸®ÀÇ IT°øºÎ]
 	}
 
 	public void Cmd() throws IOException, InterruptedException {
@@ -92,12 +105,12 @@ public class IOControll {
 		while ((s = stdError.readLine()) != null) {
 			System.out.println(s);
 		}
-//			System.out.println("7Â÷½Ãµµ");
+//			System.out.println("7ì°¨ì‹œë„");
 	}
 
 //	public void Cmd() throws IOException {
 //		String[] cmd = new String[] { "cmd", "javac", "Output.java", "java", "Output" };
-//		// ÃâÃ³: https://yangyag.tistory.com/55 [Hello Brother!]
+//		// ì¶œì²˜: https://yangyag.tistory.com/55 [Hello Brother!]
 //		String str = null;
 //		
 //		Process process = new ProcessBuilder(cmd).start();
@@ -112,10 +125,10 @@ public class IOControll {
 //	}
 
 	// public String inputCommand(String cmd) {
-//	         StringBuffer buffer = new StringBuffer(); // StringBuffer °´Ã¼ ¼±¾ğ
+//	         StringBuffer buffer = new StringBuffer(); // StringBuffer ê°ì²´ ì„ ì–¸
 	//
-////	         buffer.append("cmd.exe /c " + cmd); // String ÇüÅÂ ¹öÆÛ º¯¼ö¿¡ StringÀ» Ãß°¡ÇÔ
-//	         buffer.append("cmd.exe /c "); // String ÇüÅÂ ¹öÆÛ º¯¼ö¿¡ StringÀ» Ãß°¡ÇÔ
+////	         buffer.append("cmd.exe /c " + cmd); // String í˜•íƒœ ë²„í¼ ë³€ìˆ˜ì— Stringì„ ì¶”ê°€í•¨
+//	         buffer.append("cmd.exe /c "); // String í˜•íƒœ ë²„í¼ ë³€ìˆ˜ì— Stringì„ ì¶”ê°€í•¨
 //	         buffer.append(cmd);
 	//
 //	      return buffer.toString();
