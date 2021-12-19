@@ -78,6 +78,37 @@ public class IOControll {
 		}
 
 	}
+	
+	public String readFile() {
+		String result="";
+		 try{
+	            //파일 객체 생성
+	            File file = new File("C:/Users/smhrd/write.txt");
+	            
+	            //입력 스트림 생성
+	            FileReader filereader = new FileReader(file);
+	            
+	            //입력 버퍼 생성
+	            BufferedReader bufReader = new BufferedReader(filereader);
+	            String line = "";
+	            while((line = bufReader.readLine()) != null){
+	                System.out.println(line);
+	                result +=line;
+	            }
+	            
+	            //.readLine()은 끝에 개행문자를 읽지 않는다.            
+	            bufReader.close();
+	            
+	        }catch (FileNotFoundException e) {
+	            // TODO: handle exception
+	        }catch(IOException e){
+	            System.out.println(e);
+	        }
+		 return result;
+
+//	출처: https://jeong-pro.tistory.com/69 [기본기를 쌓는 정아마추어 코딩블로그]
+// 읽고 쓰는 방법 class 별로 여러 방법을 보여즘. 학습에 좋음
+	}
 
 	public void Cmd() throws IOException, InterruptedException {
 
