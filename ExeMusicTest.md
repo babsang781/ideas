@@ -20,7 +20,7 @@
 10차 시도: music 폴더 위치 src 같은 위치 리소스 파일 설정: music/파일 :콘솔 됨: exe 안 됨<br/>
 11차 시도: music 폴더 위치 src 같은 위치 리소스 파일 설정: ../music/파일 :콘솔 안됨: exe 안 됨<br/>
 12차 시도: music 폴더 위치 src 같은 위치 리소스 파일 설정: ././music/파일 :콘솔 됨: exe 안 됨<br/><br/></p>
-
+<hr>
 <p><strong>[ 윈도우가 인식하는 경로 \\ 써야 함. +exe 만들 때 리소스 상대경로 설정 재시도 ] </strong><br/>
 13차 시도: music 폴더 위치 src 같은 위치 리소스 파일 설정/exe 파일시 custom 경로 설정: \\music/파일 :콘솔 안 됨: exe 안 됨<br/>
 14차 시도: music 폴더 위치 src 같은 위치 리소스 파일 설정/exe 파일시 custom 경로 설정: ./music/파일 :콘솔 됨: exe 안 됨<br/>
