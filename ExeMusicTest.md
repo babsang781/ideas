@@ -2,7 +2,7 @@
 <br/>
 1차 시도: 콘솔됨 : music./ 파일 : exe 파일 안 됨<br/>
 2차 시도: 콘솔됨 : ./music./ 파일 : exe 파일 안 됨<br/>
-<Strong>3차 시도: 콘솔됨 : /music./ 파일 : exe 파일 됨(music에 음악이 있는 조건)</Strong><br/>
+<Strong>3차 시도: 콘솔됨 : /music./ 파일 : exe 파일 됨(C:\music에 음악이 있는 조건)</Strong><br/>
 ----<br/>
 [ C:\music 폴더 비우고 다시 테스트 ]<br/>
 1차 시도: music 폴더 위치 패키지: ../music./파일 :콘솔 안 됨<br/>
