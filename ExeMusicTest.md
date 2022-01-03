@@ -31,3 +31,13 @@
 <br/>          ..\\..\\music\\파일 :콘솔 안 됨: exe 안 됨
 <br/>          .\\..\\..\\music\\파일 :콘솔 안 됨: exe 안 됨
 <br/>지긍까지는 전부 실패... 현재 도움 요청해놓음... </p>
+
+--- 
+2022.01.03. 담임 쌤 봐주심Main.java 파일 있는 경로에 music 리소스폴더 드래그하셨던가? refactor> move 한 건 아니고, 여튼 패키지처럼 음악 파일들이 정렬됐고, 아래 코드로 경로 확인했을 때 main  파일과 같은 위치인 것으로 확인함.
+String path = Main.class.getResource("").getPath();
+System.out.println(path+"music/badEnding.mp3");
+
+musicplayer.java 에 경로 ./로 수정. 
+./music/goodending 과 music/goodending 두 가지 버전 모두 이클립스와 exe 파일에서 잘 소리가 났다.
+
+하지만 카톡으로 내 노트북에 exe 파일을 보내서 확인했을 EO는 여전히 음악이 안 나온다.
