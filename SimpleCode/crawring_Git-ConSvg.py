@@ -11,5 +11,7 @@ soup = bs(res.text, 'lxml')
 soup.select('svg.js-calendar-graph-svg')
 
 
+
+
 # 하지만 실패... jsp로 웹 출력했을 때, 전부 단일한 검정색으로 출력되어서 contribution의 수와, 색깔 확인이 안 됨.
 # 아마도 css 설정과, contribution 값이 다른 소스에 있어서 그런 것 같음. 그것도 찾아서 같이 가져와야 할 듯
